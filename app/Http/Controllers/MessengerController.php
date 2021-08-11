@@ -16,6 +16,7 @@ class MessengerController extends Controller
         $message = $input['entry'][0]['messaging'][0]['message']['text'];
 
         $response = [
+            'messaging_type'=>"RESPONSE",
             'recipient' => ['id' => $id],
             'message' => ['text' => 'Hello World! :)']
         ];
