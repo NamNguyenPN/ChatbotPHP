@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MessengerController;
+use App\Http\Controllers\CoreSample;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('bot',[MessengerController::class,'index']);
-Route::post('bot',[MessengerController::class,'index']);
+Route::get('bot',[CoreSample::class,'Process']);
+Route::post('bot',[CoreSample::class,'Process']);
 
 Route::get('/', function () {
     return view('welcome');
