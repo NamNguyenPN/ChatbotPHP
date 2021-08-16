@@ -19,7 +19,8 @@ class PreJson extends Controller
         return $json;
     }
     //Gửi nội dung audio, image, video
-    public function AttachementJSON($id,$type,$url)  {
+    public function AttachementJSON($id,$type,$url)  
+    {
         $json='{
             "recipient": {
                 "id": "'.$id.'"
@@ -37,7 +38,8 @@ class PreJson extends Controller
         return $json;
     }
     //Menu chính (có thể viết Menu cho việc học dựa trên cấu trúc này)
-    public function MainMenuJSON($id){
+    public function MainMenuJSON($id)
+    {
         $json='{
             "psid": "'.$id.'",
             "persistent_menu": [

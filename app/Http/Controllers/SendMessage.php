@@ -23,7 +23,6 @@ class SendMessage extends Controller
         curl_setopt($ch,CURLOPT_POST,1);
         curl_setopt($ch,CURLOPT_POSTFIELDS,$response);
         curl_setopt($ch,CURLOPT_HTTPHEADER,array('Content-Type: application/json'));
-        // $out->writeln("POST SEND: ".$ch);
         $result = curl_exec($ch);
         curl_close($ch);
     }
