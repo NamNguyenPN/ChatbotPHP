@@ -15,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('bot',[Core::class,"Chatbot"])->middleware('verifybot');
-Route::post('bot',[Core::class,"Process"]);
+Route::post('bot',[Core::class,"Chatbot"]);
 Route::get('test',[Core::class,"test"]);
-Route::get('image',[Core::class,"Image"]);
 Route::get('/', function () {
     return view('welcome');
 });
