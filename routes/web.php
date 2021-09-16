@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('bot',[Core::class,"Process"]);
+Route::get('bot',[Core::class,"Chatbot"])->middleware('verifybot');
 Route::post('bot',[Core::class,"Process"]);
 Route::get('test',[Core::class,"test"]);
 Route::get('image',[Core::class,"Image"]);

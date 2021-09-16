@@ -16,12 +16,6 @@ class ReceiveMessage extends Controller
 
     public function __construct()
     {
-        $local_token = env("FACEBOOK_MESSENGER_WEBHOOK_TOKEN");
-        $hub_verify_token = request('hub_verify_token');
-        if($hub_verify_token === $local_token){
-            echo request('hub_challenge');
-            exit;
-        }
         $this->receive_data = json_decode(file_get_contents("php://input"),true);       
     }
 
